@@ -1,0 +1,51 @@
+.navbar {
+    width: 100%;
+    padding: 0.6rem 5rem;
+    background: #f05a22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-center > h2 {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .pages {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    gap: 4rem;
+    border-radius: 1.5rem;
+  }
+
+  .pages>a{
+    text-decoration: none;
+    color: #f6c0ac;
+    display: flex;
+  }
+
+  .active{
+    color: #f05a22!important;
+  }
+
+
+ 
+  @media (max-width: 792px){
+    .navbar{
+        padding-inline: 1.5rem;
+    }
+    .nav-center{
+        flex-direction: column;
+        gap: 1rem;
+    }
+  }
