@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Card from './Card'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import share from '../assets/share.png'
 import heart from '../assets/heart.png'
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function Details() {
     const {id} = useParams();
+    const navigate = useNavigate();
     const {data} = useSelector(state => state)
     const [details, setDetails] = useState(true);
 
@@ -21,7 +23,10 @@ function Details() {
 
     return (
         <div className='details-component'>
-            <h1>Post Number #{id}</h1>
+            <div className="heading">
+                <p className='back' onClick={() => navigate('/')}><FaArrowLeftLong /></p>
+                <h1>Post Number #{id}</h1>
+            </div>
             <div className="selected-post">
                 <div className="post-img-box">
                     <img src={`https://picsum.photos/200?random=${id}`} alt="" />
